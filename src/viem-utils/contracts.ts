@@ -2,8 +2,8 @@ import { createPublicClient, createWalletClient, formatEther, getContract, Hex, 
 import { mainnet, sepolia } from 'viem/chains'
 import { privateKeyToAccount } from 'viem/accounts'
 import dotenv from 'dotenv'
-import tokenBankJson from '@artifacts/TokenBankV2.json'
-import baseERC20 from '@artifacts/BaseERC20.json'
+import tokenBankJson from '../../artifacts/TokenBankV2.json'
+import baseERC20 from '../../artifacts/BaseERC20.json'
 
 const { abi, bytecode } = tokenBankJson
 // const {abi, bytecode} = baseERC20
