@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "ES2022",
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "outDir": "./dist",
+      "resolveJsonModule": true, 
+      "rootDir": "./src",
+      "jsx": "react-jsx", // 支持 React JSX 语法
+      "paths": {
+        "@artifacts/*": ["./artifacts/*"]
+      }
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}
