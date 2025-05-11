@@ -6,35 +6,23 @@ import { abi as TokenBankV2_abi } from '../../artifacts/TokenBankV2.json'
 
 const erc20_address = "0x56b9d2cf44789d9626593a3cd3b75bff9e6a64a0";
 const bank_address = "0x0d1ac1a9a830904b6b447f82785e67b377ec1ecb";
-export function ReadContract() {
+export function ReadTokenBankContract() {
     const { isConnected, address: AccountAddr } = useAccount()
     const {
         data: balance,
         error,
         isPending } = useReadContract({
-            address: erc20_address,
-            abi: BaseERC20_abi,
-            functionName: 'balanceOf',
+            address: bank_address,
+            abi: TokenBankV2_abi,
+            functionName: 'addr_balance',
             // args: ['0x03A71968491d55603FFe1b11A9e23eF013f75bCF'],
             args: [AccountAddr],
             query: {
                 enabled: !!AccountAddr,
             }
         })
-    const {
-        data: bank_balance,
-        error: bank_error,
-        isPending: bank_isPending } = useReadContract({
-            address: erc20_address,
-            abi: BaseERC20_abi,
-            functionName: 'balanceOf',
-            args: [AccountAddr],
-            query: {
-                enabled: !!AccountAddr,
-            }
-        })
-    if (!isConnected) return <div>账户余额: 请连接钱包</div>
-    if (isPending) return <div>账户余额: Loading...</div>
+    if (!isConnected) return <div>TokenBank账户余额: 请连接钱包</div>
+    if (isPending) return <div>TokenBank账户余额: Loading...</div>
     if (error) {
         // 安全地处理错误信息
         const errorMessage = (error as unknown as BaseError)?.shortMessage
@@ -43,6 +31,6 @@ export function ReadContract() {
         return <div>Error: {errorMessage}</div>
     }
     return (
-        <div>账户余额: {balance?.toString()}</div>
+        <div>TokenBank账户余额: {balance?.toString()}</div>
     )
 }

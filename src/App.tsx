@@ -7,6 +7,12 @@ import { Profile } from './profile'
 import { Account } from './account'
 import { WalletOptions } from './wallet-options'
 import { ReadContract } from './rw-contract/read-contract'
+import { WriteContract } from './rw-contract/write-contract'
+import { ReadTokenBankContract } from './rw-contract/read-bank-contract'
+import { WriteSaveBankContract } from './rw-contract/write-bank-save-contract'
+import { WriteApproveBankContract } from './rw-contract/write-bank-approve-contract'
+import { ReadTokenBankApproveContract } from './rw-contract/read-bank-approve-contract'
+import { WriteWithdrawBankContract } from './rw-contract/write-bank-withdraw-contract'
 
 const queryClient = new QueryClient()
 
@@ -23,9 +29,15 @@ const App: React.FC = () => {
                 <ConnectWallet />
                 {/* <Profile /> */}
                 <div>
-                    <h1>Hello ~~~</h1>
-                    <h1>Hello ~~~</h1>
-                    <ReadContract/>
+                    <h3>个人账户</h3>
+                    <WriteContract />
+                    <ReadContract />
+                    <h2>银行账户</h2>
+                    <WriteApproveBankContract />
+                    <ReadTokenBankApproveContract />
+                    <WriteSaveBankContract />
+                    <ReadTokenBankContract />
+                    <WriteWithdrawBankContract />
                 </div>
             </QueryClientProvider>
         </WagmiProvider>
