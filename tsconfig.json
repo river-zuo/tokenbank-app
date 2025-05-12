@@ -2,8 +2,8 @@
     "compilerOptions": {
       "target": "ES2022",
       // 使用ts-node单个文件运行时, 需要设置为CommonJS
-      // "module": "ESNext",
-      "module": "CommonJS",
+      "module": "ESNext",
+      // "module": "CommonJS",
       "moduleResolution": "Node",
       "strict": true,
       "esModuleInterop": true,
