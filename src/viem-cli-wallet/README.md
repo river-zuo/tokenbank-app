@@ -1,4 +1,5 @@
-交易hash 0xbdbc31742d095b4916341a689c59568c7ce6c7ccadf3c436a6a49eb8f265873a
+代码: cli-wallet2.ts
+交易hash 0xd695754caf26c09af527f021512b0e5ab39856d185f5793b802be3ee31c903d1
 ```
 使用 Viem 构建一个 CLI 钱包
 题目#1
