@@ -4,15 +4,15 @@ import { injected, metaMask, safe, walletConnect } from 'wagmi/connectors'
 
 const sepoliaRpcUrl = import.meta.env.SEPOLIA_RPC_URL;
 
-const projectId = '<WALLETCONNECT_PROJECT_ID>'
-
+const projectId = '<c7b675b220e90d8fc05c4b232e11388d>'
+// WALLETCONNECT_PROJECT_ID
 export const config_old = createConfig({
   chains: [mainnet, sepolia],
   connectors: [
-    // injected(),
+    injected(),
     metaMask(),
     // safe(),
-    // walletConnect({ projectId }),
+    walletConnect({ projectId }),
   ],
   transports: {
     [mainnet.id]: http(),

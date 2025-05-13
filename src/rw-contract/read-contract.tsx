@@ -1,4 +1,5 @@
 import { type BaseError, useReadContract, useReadContracts, useAccount } from 'wagmi'
+import {formatEther} from 'viem'
 // import { wagmiContractConfig } from './contracts'
 // import { abi as BaseERC20_abi } from '@artifacts/BaseERC20.json'
 import { abi as BaseERC20_abi } from '../../artifacts/BaseERC20.json'
@@ -33,8 +34,8 @@ export function ReadContract() {
                 enabled: !!AccountAddr,
             }
         })
-    if (!isConnected) return <div>账户余额: 请连接钱包</div>
-    if (isPending) return <div>账户余额: Loading...</div>
+    if (!isConnected) return <div>ERC20账户余额: 请连接钱包</div>
+    if (isPending) return <div>ERC20账户余额: Loading...</div>
     if (error) {
         // 安全地处理错误信息
         const errorMessage = (error as unknown as BaseError)?.shortMessage
@@ -43,6 +44,6 @@ export function ReadContract() {
         return <div>Error: {errorMessage}</div>
     }
     return (
-        <div>账户余额: {balance?.toString()}</div>
+        <div>ERC20账户余额: {balance?.toString()} | {formatEther(balance as bigint)} ERC20_dev</div>
     )
 }
