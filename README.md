@@ -1,6 +1,6 @@
 # TokenBank应用
 - nft_onlist.png 为NFT上架后的截图
-![图片描述](./nft_onlist.png)
+![alt text](nft_onlist.jpg)
 ```
 DApp 接入 AppKit 登录
 为 NFTMarket 项目添加前端，并接入 AppKit 进行前端登录，并实际操作使用 WalletConnect 进行登录（需要先安装手机端钱包）。
