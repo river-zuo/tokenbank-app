@@ -13,6 +13,8 @@ import { WriteSaveBankContract } from './rw-contract/write-bank-save-contract'
 import { WriteApproveBankContract } from './rw-contract/write-bank-approve-contract'
 import { ReadTokenBankApproveContract } from './rw-contract/read-bank-approve-contract'
 import { WriteWithdrawBankContract } from './rw-contract/write-bank-withdraw-contract'
+import SiwePage from './siwe/page'
+import {PermitBuyWithSign} from './rw-contract/permitbuy-with-sign';
 
 const queryClient = new QueryClient()
 
@@ -38,6 +40,9 @@ const App: React.FC = () => {
                     <WriteSaveBankContract />
                     <ReadTokenBankContract />
                     <WriteWithdrawBankContract />
+                    <hr />
+                     <SiwePage />
+                    <PermitBuyWithSign/>
                 </div>
             </QueryClientProvider>
         </WagmiProvider>
