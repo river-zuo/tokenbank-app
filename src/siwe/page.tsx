@@ -56,8 +56,9 @@ export default function SiwePage() {
             });
 
             // signtypeedData
-            await getPermitSignature(walletClient);
+            // await getPermitSignature(walletClient);
             // await getPermitSignature2(walletClient);
+            await getPermitSignature3(walletClient);
 
             if (true) {
                 return;
@@ -194,6 +195,59 @@ export default function SiwePage() {
         });
         const resData = splitSignature(signature);
         console.log("getPermitSignature2 typed data:", resData);
+    }
+
+    async function getPermitSignature3(client: WalletClient) {
+        const domain = {
+            name: 'Permit2', // ERC20Permit 的 name  Permit2
+            // version: '1',
+            chainId: sepolia.id,
+            verifyingContract: "0xEdfC81c5326Ab4abDBafF66d09dd1F29ac5BE93F" as Hex, // 合约地址
+        };
+
+        const permit2Types = {
+            PermitTransferFrom: [
+                { name: 'permitted', type: 'TokenPermissions' },
+                { name: 'nonce', type: 'uint256' },
+                { name: 'deadline', type: 'uint256' }
+            ],
+            TokenPermissions: [
+                { name: 'token', type: 'address' },
+                { name: 'amount', type: 'uint256' }
+            ]
+        };
+
+        // const signer = '0x005a018ea9c6331667f1c50f2cea3b1061F70373';
+        const signer = '0x4251BA8F521CE6bAe071b48FC4621baF621057c5';
+
+        const curDate = Math.floor(Date.now() / 1000) + 3600 * 24;
+        console.log("curDate:", curDate);
+        // const message = {
+        //     buyer: signer, // 签名者地址
+        //     tokenId: 1, // nft_id
+        //     nonce: 1, // 签名者的当前 nonce（从合约中获取）
+        //     deadline: curDate, // 当前时间 + 1 小时
+        // };
+
+        const message = {
+            permitted: {
+                token: '0x32Ae70b4f364775e54741a6d60F0beb8333F2caA',
+                amount: 200 // 1 token, 18 decimals
+            },
+            nonce: 0, // 用户当前nonce
+            deadline: curDate // 1小时后过期
+            };
+
+        const signature = await client.signTypedData({
+            domain,
+            types: permit2Types,
+            primaryType: 'PermitTransferFrom', // 主类型名称
+            message,
+            account: signer, // 签名者地址
+        });
+        console.log("getPermitSignature3 signature:", signature);
+        // const resData = splitSignature(signature);
+        // console.log("getPermitSignature2 typed data:", resData);
     }
 
     // Helper: 分割签名

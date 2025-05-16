@@ -15,6 +15,8 @@ import { ReadTokenBankApproveContract } from './rw-contract/read-bank-approve-co
 import { WriteWithdrawBankContract } from './rw-contract/write-bank-withdraw-contract'
 import SiwePage from './siwe/page'
 import {PermitBuyWithSign} from './rw-contract/permitbuy-with-sign';
+import TransferList from './get-logs/TransferList';
+import GetLogs from './get-logs/getlogs';
 
 const queryClient = new QueryClient()
 
@@ -29,8 +31,9 @@ const App: React.FC = () => {
         <WagmiProvider config={config}>
             <QueryClientProvider client={queryClient}>
                 <ConnectWallet />
+                <GetLogs />
                 {/* <Profile /> */}
-                <div>
+                {/* <div>
                     <h3>个人账户</h3>
                     <WriteContract />
                     <ReadContract />
@@ -43,7 +46,7 @@ const App: React.FC = () => {
                     <hr />
                      <SiwePage />
                     <PermitBuyWithSign/>
-                </div>
+                </div> */}
             </QueryClientProvider>
         </WagmiProvider>
     );
