@@ -13,6 +13,7 @@ import { WriteSaveBankContract } from './rw-contract/write-bank-save-contract'
 import { WriteApproveBankContract } from './rw-contract/write-bank-approve-contract'
 import { ReadTokenBankApproveContract } from './rw-contract/read-bank-approve-contract'
 import { WriteWithdrawBankContract } from './rw-contract/write-bank-withdraw-contract'
+import { EIP7702WriteApproveBankContract } from './eip7702/EIP7702-write-and-approve-contract'
 import SiwePage from './siwe/page'
 import {PermitBuyWithSign} from './rw-contract/permitbuy-with-sign';
 import TransferList from './get-logs/TransferList';
@@ -26,14 +27,18 @@ function ConnectWallet() {
     return <WalletOptions />
 }
 const App: React.FC = () => {
-
     return (
         <WagmiProvider config={config}>
             <QueryClientProvider client={queryClient}>
                 <ConnectWallet />
-                <GetLogs />
+                {/* <GetLogs /> */}
                 {/* <Profile /> */}
-                {/* <div>
+                <div>
+                    <h3>授权并转账</h3>
+                    <EIP7702WriteApproveBankContract />
+                    <ReadContract />
+                    <ReadTokenBankContract />
+                    {/* <hr />
                     <h3>个人账户</h3>
                     <WriteContract />
                     <ReadContract />
@@ -42,11 +47,11 @@ const App: React.FC = () => {
                     <ReadTokenBankApproveContract />
                     <WriteSaveBankContract />
                     <ReadTokenBankContract />
-                    <WriteWithdrawBankContract />
-                    <hr />
+                    <WriteWithdrawBankContract /> */}
+                    {/* <hr />
                      <SiwePage />
-                    <PermitBuyWithSign/>
-                </div> */}
+                    <PermitBuyWithSign/> */}
+                </div>
             </QueryClientProvider>
         </WagmiProvider>
     );

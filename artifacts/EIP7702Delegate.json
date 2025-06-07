@@ -1,0 +1,119 @@
+{
+    "abi": [
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "uint8",
+                    "name": "status",
+                    "type": "uint8"
+                }
+            ],
+            "name": "record_status",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "sender",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "addr_this",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "address[]",
+                    "name": "targets",
+                    "type": "address[]"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint8",
+                    "name": "code",
+                    "type": "uint8"
+                }
+            ],
+            "name": "triggle_ink",
+            "type": "event"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address[]",
+                    "name": "targets",
+                    "type": "address[]"
+                },
+                {
+                    "internalType": "bytes[]",
+                    "name": "invokeData",
+                    "type": "bytes[]"
+                }
+            ],
+            "name": "multiExec",
+            "outputs": [
+                {
+                    "internalType": "bytes[]",
+                    "name": "results",
+                    "type": "bytes[]"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "target",
+                    "type": "address"
+                },
+                {
+                    "internalType": "bytes",
+                    "name": "invokeData",
+                    "type": "bytes"
+                }
+            ],
+            "name": "multiExecSingle",
+            "outputs": [
+                {
+                    "internalType": "bytes",
+                    "name": "resultV",
+                    "type": "bytes"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bool",
+                    "name": "status",
+                    "type": "bool"
+                }
+            ],
+            "name": "testEvent",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+    },
+    "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+    }
+}

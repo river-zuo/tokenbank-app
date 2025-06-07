@@ -1,7 +1,7 @@
 import { useAccount, useDisconnect, useEnsAvatar, useEnsName } from 'wagmi'
 
 export function Account() {
-  const { address } = useAccount()
+  const { address, connector, chain } = useAccount()
   const { disconnect } = useDisconnect()
   const { data: ensName } = useEnsName({ address })
   const { data: ensAvatar } = useEnsAvatar({ name: ensName! })
@@ -10,7 +10,8 @@ export function Account() {
     <div>
       {ensAvatar && <img alt="ENS Avatar" src={ensAvatar} />}
       {address && <div>{ensName ? `${ensName} (${address})` : address}</div>}
-      <button onClick={() => disconnect()}>断开metaMask连接</button>
+      {chain && <div>当前网络: {chain?.name} ({chain?.id})</div>}
+      <button onClick={() => disconnect()}>断开{connector?.name}连接</button>
     </div>
   )
 }
