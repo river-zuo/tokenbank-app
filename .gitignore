@@ -40,4 +40,4 @@ build/
 
 # Misc
 *.lock
-
+!yarn.lock
