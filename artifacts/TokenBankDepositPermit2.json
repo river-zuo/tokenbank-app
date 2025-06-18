@@ -1,0 +1,744 @@
+{
+    "abi": [
+        {
+            "type": "constructor",
+            "inputs": [
+                {
+                    "name": "erc20Addr",
+                    "type": "address",
+                    "internalType": "address"
+                },
+                {
+                    "name": "permit2Addr",
+                    "type": "address",
+                    "internalType": "address"
+                }
+            ],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "_permit2",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address",
+                    "internalType": "contract IPermit2"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "addr_balance",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "address",
+                    "internalType": "address"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "baseErc20",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address",
+                    "internalType": "contract BaseERC20"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "deposit",
+            "inputs": [
+                {
+                    "name": "amount",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "depositWithPermit2",
+            "inputs": [
+                {
+                    "name": "token",
+                    "type": "address",
+                    "internalType": "address"
+                },
+                {
+                    "name": "amount",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "nonce",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "deadline",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "to",
+                    "type": "address",
+                    "internalType": "address"
+                },
+                {
+                    "name": "owner",
+                    "type": "address",
+                    "internalType": "address"
+                },
+                {
+                    "name": "signature",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "hashPermitTransferFrom",
+            "inputs": [
+                {
+                    "name": "permit",
+                    "type": "tuple",
+                    "internalType": "struct ISignatureTransfer.PermitTransferFrom",
+                    "components": [
+                        {
+                            "name": "permitted",
+                            "type": "tuple",
+                            "internalType": "struct ISignatureTransfer.TokenPermissions",
+                            "components": [
+                                {
+                                    "name": "token",
+                                    "type": "address",
+                                    "internalType": "address"
+                                },
+                                {
+                                    "name": "amount",
+                                    "type": "uint256",
+                                    "internalType": "uint256"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "nonce",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        },
+                        {
+                            "name": "deadline",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        }
+                    ]
+                },
+                {
+                    "name": "spender",
+                    "type": "address",
+                    "internalType": "address"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32",
+                    "internalType": "bytes32"
+                }
+            ],
+            "stateMutability": "pure"
+        },
+        {
+            "type": "function",
+            "name": "spendWithPermit",
+            "inputs": [
+                {
+                    "name": "permit",
+                    "type": "tuple",
+                    "internalType": "struct ISignatureTransfer.PermitTransferFrom",
+                    "components": [
+                        {
+                            "name": "permitted",
+                            "type": "tuple",
+                            "internalType": "struct ISignatureTransfer.TokenPermissions",
+                            "components": [
+                                {
+                                    "name": "token",
+                                    "type": "address",
+                                    "internalType": "address"
+                                },
+                                {
+                                    "name": "amount",
+                                    "type": "uint256",
+                                    "internalType": "uint256"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "nonce",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        },
+                        {
+                            "name": "deadline",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        }
+                    ]
+                },
+                {
+                    "name": "transferDetails",
+                    "type": "tuple",
+                    "internalType": "struct ISignatureTransfer.SignatureTransferDetails",
+                    "components": [
+                        {
+                            "name": "to",
+                            "type": "address",
+                            "internalType": "address"
+                        },
+                        {
+                            "name": "requestedAmount",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        }
+                    ]
+                },
+                {
+                    "name": "owner",
+                    "type": "address",
+                    "internalType": "address"
+                },
+                {
+                    "name": "signature",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "withdraw",
+            "inputs": [],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        }
+    ],
+    "bytecode": {
+        "object": "0x60c0346100a157601f610af438819003918201601f19168301916001600160401b038311848410176100a65780849260409485528339810103126100a157610052602061004b836100bc565b92016100bc565b6001600160a01b039182166080521660a052604051610a2390816100d1823960805181818161024d0152818161077e01526107ef015260a05181818161011f0152818161057f015261066d0152f35b600080fd5b634e487b7160e01b600052604160045260246000fd5b51906001600160a01b03821682036100a15756fe608060408181526004918236101561001657600080fd5b600092833560e01c9182633ccfd60b146107ad57508163836b80331461076957816383721938146105ae5781639a52f82c1461056a578163b6743cdd1461030e578163b6b55f251461020f578163dd433f77146100b6575063e262838f1461007d57600080fd5b346100b25760203660031901126100b25760209181906001600160a01b036100a361089c565b16815280845220549051908152f35b5080fd5b919050346101ed5761010090366003190182811261020b5760801361020757806083193601126102075760c435926001600160a01b0380851692908386036101fa5760e43567ffffffffffffffff81116102035761011790369085016108c8565b9560a43596837f00000000000000000000000000000000000000000000000000000000000000001691823b156101ff57855163187945bd60e11b815296803586811691908290036101fa578801526024356024880152604435604488015260643560648801526084359485168095036101fa57866101ba819582948e9b948c99958e8b97608488015260a487015260c486015260e48501526101048401916109cc565b03925af19081156101f157506101d9575b50506101d691610992565b80f35b6101e290610928565b6101ed5782386101cb565b8280fd5b513d84823e3d90fd5b600080fd5b8a80fd5b8780fd5b8380fd5b8480fd5b9050346101ed576020806003193601126102075782516323b872dd60e01b8152338184015230602482015282356044820181905293908281606481897f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03165af19081156103045786916102d7575b501561029657846101d68533610992565b5162461bcd60e51b815291820181905260248201527f7472616e7366657246726f6d20696e766f6b652072657475726e2066616c7365604482015260649150fd5b6102f79150833d85116102fd575b6102ef8183610958565b81019061097a565b38610285565b503d6102e5565b82513d88823e3d90fd5b82843461056757366003190160a081126100b257608081126100b2578251916060830167ffffffffffffffff9284821084831117610552578590828252126100b257610359816108f6565b61036161089c565b81526024356080850152835260209485840191604435835285850190606435825261038a6108b2565b908751608081018181108882111761053d57895289605d918281527f5065726d69745472616e7366657246726f6d28546f6b656e5065726d69737369828201527f6f6e73207065726d69747465642c61646472657373207370656e6465722c75698b8201527f6e74323536206e6f6e63652c75696e7432353620646561646c696e652900000060608201528a51935b83811061052a57505050507f546f6b656e5065726d697373696f6e73286164647265737320746f6b656e2c75607d8201526d696e7432353620616d6f756e742960901b609d820152608b815261046e8161093c565b88815191012095519060018060a01b03918983825116910151948951958b8701927f618358ac3db8dc274f0cd8829da7e234bd48cd73c4a740aede1adec9846d06a184528b88015260608701526060865260808601978689109089111761051557509061012094939291878a5284519020955192519560a0850198895260c08501521660e0830152610100820152015260a0815261050b8161093c565b5190209051908152f35b604190634e487b7160e01b6000525260246000fd5b8181018301518582018401528201610419565b604186634e487b7160e01b6000525260246000fd5b604187634e487b7160e01b6000525260246000fd5b80fd5b5050346100b257816003193601126100b257517f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03168152602090f35b8383346100b25760e03660031901126100b2576105c961089c565b92602435916105d66108b2565b60a4359590926001600160a01b039182881691908289036102035767ffffffffffffffff9260c4358481116107655761061290369085016108c8565b91909286885191610622836108f6565b16815289602082015287519560608701908782109082111761075257885285526020850197604435895287860196606435885280895192610662846108f6565b1682528a60208301527f00000000000000000000000000000000000000000000000000000000000000001696873b1561074e57938b9795929388946106fe610716946106d79a988d519e8f9c8d9b8c9a63187945bd60e11b8c528b0190516020809160018060a01b0381511684520151910152565b51604489015251606488015280516001600160a01b031660848801526020015160a4870152565b60c485015261010060e48501526101048401916109cc565b03925af19081156107455750610732575b506101d69192610992565b9161073f6101d693610928565b91610727565b513d85823e3d90fd5b8b80fd5b634e487b7160e01b8c526041865260248cfd5b8980fd5b5050346100b257816003193601126100b257517f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03168152602090f35b9150346102075783600319360112610207573384526020918483528385205463a9059cbb60e01b82523383830152602482015282816044818860018060a01b037f0000000000000000000000000000000000000000000000000000000000000000165af1908115610892578591610875575b50156108345750908280923382525281205580f35b915162461bcd60e51b815291820152601c60248201527f7472616e7366657220696e766f6b652072657475726e2066616c7365000000006044820152606490fd5b61088c9150833d85116102fd576102ef8183610958565b3861081f565b84513d87823e3d90fd5b600435906001600160a01b03821682036101fa57565b608435906001600160a01b03821682036101fa57565b9181601f840112156101fa5782359167ffffffffffffffff83116101fa57602083818601950101116101fa57565b6040810190811067ffffffffffffffff82111761091257604052565b634e487b7160e01b600052604160045260246000fd5b67ffffffffffffffff811161091257604052565b60c0810190811067ffffffffffffffff82111761091257604052565b90601f8019910116810190811067ffffffffffffffff82111761091257604052565b908160209103126101fa575180151581036101fa5790565b60018060a01b03166000526000602052604060002080549182018092116109b65755565b634e487b7160e01b600052601160045260246000fd5b908060209392818452848401376000828201840152601f01601f191601019056fea26469706673582212204ac34afefb46b404cc35ec7c4d3cae61d03afb34ed771de22c1abecc6e97722764736f6c63430008110033",
+        "sourceMap": "275:3750:36:-:0;;;;;;;;;;;;;-1:-1:-1;;275:3750:36;;;;-1:-1:-1;;;;;275:3750:36;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;:::i;:::-;-1:-1:-1;;;;;275:3750:36;;;514:32;;275:3750;;556:32;275:3750;;;;;;;;514:32;275:3750;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;275:3750:36;;;;;;-1:-1:-1;275:3750:36;;;;;-1:-1:-1;275:3750:36;;;;-1:-1:-1;;;;;275:3750:36;;;;;;:::o",
+        "linkReferences": {}
+    },
+    "deployedBytecode": {
+        "object": "0x608060408181526004918236101561001657600080fd5b600092833560e01c9182633ccfd60b146107ad57508163836b80331461076957816383721938146105ae5781639a52f82c1461056a578163b6743cdd1461030e578163b6b55f251461020f578163dd433f77146100b6575063e262838f1461007d57600080fd5b346100b25760203660031901126100b25760209181906001600160a01b036100a361089c565b16815280845220549051908152f35b5080fd5b919050346101ed5761010090366003190182811261020b5760801361020757806083193601126102075760c435926001600160a01b0380851692908386036101fa5760e43567ffffffffffffffff81116102035761011790369085016108c8565b9560a43596837f00000000000000000000000000000000000000000000000000000000000000001691823b156101ff57855163187945bd60e11b815296803586811691908290036101fa578801526024356024880152604435604488015260643560648801526084359485168095036101fa57866101ba819582948e9b948c99958e8b97608488015260a487015260c486015260e48501526101048401916109cc565b03925af19081156101f157506101d9575b50506101d691610992565b80f35b6101e290610928565b6101ed5782386101cb565b8280fd5b513d84823e3d90fd5b600080fd5b8a80fd5b8780fd5b8380fd5b8480fd5b9050346101ed576020806003193601126102075782516323b872dd60e01b8152338184015230602482015282356044820181905293908281606481897f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03165af19081156103045786916102d7575b501561029657846101d68533610992565b5162461bcd60e51b815291820181905260248201527f7472616e7366657246726f6d20696e766f6b652072657475726e2066616c7365604482015260649150fd5b6102f79150833d85116102fd575b6102ef8183610958565b81019061097a565b38610285565b503d6102e5565b82513d88823e3d90fd5b82843461056757366003190160a081126100b257608081126100b2578251916060830167ffffffffffffffff9284821084831117610552578590828252126100b257610359816108f6565b61036161089c565b81526024356080850152835260209485840191604435835285850190606435825261038a6108b2565b908751608081018181108882111761053d57895289605d918281527f5065726d69745472616e7366657246726f6d28546f6b656e5065726d69737369828201527f6f6e73207065726d69747465642c61646472657373207370656e6465722c75698b8201527f6e74323536206e6f6e63652c75696e7432353620646561646c696e652900000060608201528a51935b83811061052a57505050507f546f6b656e5065726d697373696f6e73286164647265737320746f6b656e2c75607d8201526d696e7432353620616d6f756e742960901b609d820152608b815261046e8161093c565b88815191012095519060018060a01b03918983825116910151948951958b8701927f618358ac3db8dc274f0cd8829da7e234bd48cd73c4a740aede1adec9846d06a184528b88015260608701526060865260808601978689109089111761051557509061012094939291878a5284519020955192519560a0850198895260c08501521660e0830152610100820152015260a0815261050b8161093c565b5190209051908152f35b604190634e487b7160e01b6000525260246000fd5b8181018301518582018401528201610419565b604186634e487b7160e01b6000525260246000fd5b604187634e487b7160e01b6000525260246000fd5b80fd5b5050346100b257816003193601126100b257517f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03168152602090f35b8383346100b25760e03660031901126100b2576105c961089c565b92602435916105d66108b2565b60a4359590926001600160a01b039182881691908289036102035767ffffffffffffffff9260c4358481116107655761061290369085016108c8565b91909286885191610622836108f6565b16815289602082015287519560608701908782109082111761075257885285526020850197604435895287860196606435885280895192610662846108f6565b1682528a60208301527f00000000000000000000000000000000000000000000000000000000000000001696873b1561074e57938b9795929388946106fe610716946106d79a988d519e8f9c8d9b8c9a63187945bd60e11b8c528b0190516020809160018060a01b0381511684520151910152565b51604489015251606488015280516001600160a01b031660848801526020015160a4870152565b60c485015261010060e48501526101048401916109cc565b03925af19081156107455750610732575b506101d69192610992565b9161073f6101d693610928565b91610727565b513d85823e3d90fd5b8b80fd5b634e487b7160e01b8c526041865260248cfd5b8980fd5b5050346100b257816003193601126100b257517f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03168152602090f35b9150346102075783600319360112610207573384526020918483528385205463a9059cbb60e01b82523383830152602482015282816044818860018060a01b037f0000000000000000000000000000000000000000000000000000000000000000165af1908115610892578591610875575b50156108345750908280923382525281205580f35b915162461bcd60e51b815291820152601c60248201527f7472616e7366657220696e766f6b652072657475726e2066616c7365000000006044820152606490fd5b61088c9150833d85116102fd576102ef8183610958565b3861081f565b84513d87823e3d90fd5b600435906001600160a01b03821682036101fa57565b608435906001600160a01b03821682036101fa57565b9181601f840112156101fa5782359167ffffffffffffffff83116101fa57602083818601950101116101fa57565b6040810190811067ffffffffffffffff82111761091257604052565b634e487b7160e01b600052604160045260246000fd5b67ffffffffffffffff811161091257604052565b60c0810190811067ffffffffffffffff82111761091257604052565b90601f8019910116810190811067ffffffffffffffff82111761091257604052565b908160209103126101fa575180151581036101fa5790565b60018060a01b03166000526000602052604060002080549182018092116109b65755565b634e487b7160e01b600052601160045260246000fd5b908060209392818452848401376000828201840152601f01601f191601019056fea26469706673582212204ac34afefb46b404cc35ec7c4d3cae61d03afb34ed771de22c1abecc6e97722764736f6c63430008110033",
+        "sourceMap": "275:3750:36:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;275:3750:36;;;;;;;;-1:-1:-1;;;;;275:3750:36;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;275:3750:36;;;;;;;-1:-1:-1;275:3750:36;;;;;;;;;;;;;-1:-1:-1;;;;;275:3750:36;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;2657:31;275:3750;2698:8;;;275:3750;2698:128;;;;;;275:3750;;-1:-1:-1;;;2698:128:36;;275:3750;;;;;;;;;;;;;2698:128;;275:3750;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2657:31;275:3750;;;;;;;;;;;;;;;;:::i;:::-;2698:128;;;;;;;;;;;;275:3750;2849:6;;;;;:::i;:::-;275:3750;;2698:128;;;;:::i;:::-;275:3750;;2698:128;;;;275:3750;;;;2698:128;275:3750;;;;;;;;;;;;2698:128;275:3750;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;721:57:36;;744:10;721:57;;;275:3750;764:4;275:3750;;;;;;;;;;;;;;;;;;;721:9;-1:-1:-1;;;;;275:3750:36;721:57;;;;;;;;;;;275:3750;;;;;744:10;868:6;744:10;;868:6;:::i;275:3750::-;;-1:-1:-1;;;275:3750:36;;;;;;;;;;;;;;;;;;;-1:-1:-1;275:3750:36;721:57;;;;;;;;;;;;;;;:::i;:::-;;;;;:::i;:::-;;;;;;;;;;275:3750;;;;;;;;;;;;;;;;-1:-1:-1;;275:3750:36;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2973:95;;;;;;;;;;;;;;;;-1:-1:-1;;;2973:95:36;;;;3269:121;;;;;;:::i;:::-;2973:95;;;3269:121;;3250:146;3911:16;;275:3750;;;;;;3121:73;;;;;275:3750;3629:11;;3250:146;275:3750;;;3541:109;;;;275:3750;3121:73;275:3750;;3121:73;;;275:3750;;3121:73;;275:3750;;3541:109;;275:3750;;;;;;;;;;;;;;;3250:146;275:3750;;;;;;;2973:95;;3531:120;;3250:146;;;;3823:191;275:3750;3823:191;;275:3750;;;3250:146;;;275:3750;;;3250:146;;275:3750;3250:146;;;275:3750;3250:146;275:3750;;3823:191;;;;;:::i;:::-;2973:95;3813:202;;275:3750;;;;;;;;;;;;;;;;;;2973:95;;;;;;;;;;;;;;;;;275:3750;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;411:34;-1:-1:-1;;;;;275:3750:36;;;;;;;;;;;;;;-1:-1:-1;;275:3750:36;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;-1:-1:-1;;;;;275:3750:36;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;:::i;:::-;;;;1702:67;275:3750;1702:67;;275:3750;;;;;;;;;;;;;;;;;;;;;;1639:199;;275:3750;;;;;1639:199;;;275:3750;;;;;;;;;;;;:::i;:::-;;;;1948:146;275:3750;1948:146;;275:3750;2157:8;275:3750;2157:155;;;;;;275:3750;;;;;;;;;;;;;;;;;;;;;;;;;;2157:155;;;;275:3750;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;275:3750:36;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;2157:155;;;;;;;;;;;;275:3750;2336:6;;;;;:::i;2157:155::-;;;2336:6;2157:155;;:::i;:::-;;;;;275:3750;;;;;;;;2157:155;275:3750;;;;-1:-1:-1;;;275:3750:36;;;;;;;;;;;;;;;;;;;;;;;;;;;369:36;-1:-1:-1;;;;;275:3750:36;;;;;;;;;;;;;;;;;;;;1125:10;275:3750;;;;;;;;;;;;;;1106:56;;1125:10;1106:56;;;275:3750;;;;;;;;;;;;;;;1106:9;275:3750;1106:56;;;;;;;;;;;275:3750;;;;;1125:10;;;;;;275:3750;;;;;;;;;;;-1:-1:-1;;;275:3750:36;;;;;;;;;;;;;;;;;;;1106:56;;;;;;;;;;;;;;:::i;:::-;;;;;275:3750;;;;;;;;;;;;;-1:-1:-1;;;;;275:3750:36;;;;;;:::o;:::-;;;;-1:-1:-1;;;;;275:3750:36;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;:::o;888:105::-;275:3750;;;;;;955:12;275:3750;955:12;275:3750;;;955:12;275:3750;;;;;;;;;;;;888:105::o;275:3750::-;;;;955:12;275:3750;;;;;955:12;275:3750;;;;;;;;;;;;;;-1:-1:-1;275:3750:36;;;;;;;;-1:-1:-1;;275:3750:36;;;;:::o",
+        "linkReferences": {},
+        "immutableReferences": {
+            "42292": [
+                {
+                    "start": 589,
+                    "length": 32
+                },
+                {
+                    "start": 1918,
+                    "length": 32
+                },
+                {
+                    "start": 2031,
+                    "length": 32
+                }
+            ],
+            "42295": [
+                {
+                    "start": 287,
+                    "length": 32
+                },
+                {
+                    "start": 1407,
+                    "length": 32
+                },
+                {
+                    "start": 1645,
+                    "length": 32
+                }
+            ]
+        }
+    },
+    "methodIdentifiers": {
+        "_permit2()": "9a52f82c",
+        "addr_balance(address)": "e262838f",
+        "baseErc20()": "836b8033",
+        "deposit(uint256)": "b6b55f25",
+        "depositWithPermit2(address,uint256,uint256,uint256,address,address,bytes)": "83721938",
+        "hashPermitTransferFrom(((address,uint256),uint256,uint256),address)": "b6743cdd",
+        "spendWithPermit(((address,uint256),uint256,uint256),(address,uint256),address,bytes)": "dd433f77",
+        "withdraw()": "3ccfd60b"
+    },
+    "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"erc20Addr\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"permit2Addr\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"_permit2\",\"outputs\":[{\"internalType\":\"contract IPermit2\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"addr_balance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"baseErc20\",\"outputs\":[{\"internalType\":\"contract BaseERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"depositWithPermit2\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"internalType\":\"struct ISignatureTransfer.TokenPermissions\",\"name\":\"permitted\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct ISignatureTransfer.PermitTransferFrom\",\"name\":\"permit\",\"type\":\"tuple\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"hashPermitTransferFrom\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"internalType\":\"struct ISignatureTransfer.TokenPermissions\",\"name\":\"permitted\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct ISignatureTransfer.PermitTransferFrom\",\"name\":\"permit\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"requestedAmount\",\"type\":\"uint256\"}],\"internalType\":\"struct ISignatureTransfer.SignatureTransferDetails\",\"name\":\"transferDetails\",\"type\":\"tuple\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"spendWithPermit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"depositWithPermit2(address,uint256,uint256,uint256,address,address,bytes)\":{\"notice\":\"\\u4f7f\\u7528 Permit2 \\u6388\\u6743 \\u8f6c\\u8d26\\u5b58\\u6b3e\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/sign/TokenBankDepositPermit2.sol\":\"TokenBankDepositPermit2\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/permit2/lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/\",\":forge-gas-snapshot/=lib/permit2/lib/forge-gas-snapshot/src/\",\":forge-std/=lib/forge-std/src/\",\":halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":permit2/=lib/permit2/\",\":solmate/=lib/permit2/lib/solmate/\",\":v2-core/=lib/v2-core/contracts/\",\":v2-periphery/=lib/v2-periphery/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/permit2/lib/solmate/src/tokens/ERC20.sol\":{\"keccak256\":\"0xcdfd8db76b2a3415620e4d18cc5545f3d50de792dbf2c3dd5adb40cbe6f94b10\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://57b3ab70cde374af1cf2c9888636e8de6cf660f087b1c9abd805e9271e19fa35\",\"dweb:/ipfs/QmNrLDBAHYFjpjSd12jerm1AdBkDqEYUUaXgnT854BUZ97\"]},\"lib/permit2/lib/solmate/src/utils/SafeTransferLib.sol\":{\"keccak256\":\"0xbadf3d708cf532b12f75f78a1d423135954b63774a6d4ba15914a551d348db8a\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://88ac8256bd520d1b8e6f9c4ac9e8777bffdc4a6c8afb1a848f596665779a55b4\",\"dweb:/ipfs/QmXx7X1dxe6f5VM91vgQ5BA4r2eF97GWDcQDrgHytcvfjU\"]},\"lib/permit2/src/AllowanceTransfer.sol\":{\"keccak256\":\"0x2e0a14330c1413091f5155d8df0506d753b3f1d6e8c9dcdbfb02cc05ac34b643\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a6965ea5d52145e4b1362bb9b8a9b9b640ecb13bd4d5d1770abc133c263265b6\",\"dweb:/ipfs/Qme1X5vKR3Nvw36MpsdsyhzvkPzcztUNgJ9RF7umDr6vYY\"]},\"lib/permit2/src/EIP712.sol\":{\"keccak256\":\"0x5ac9f1db92c3102fa28911c754cffc54c6bbd3eb793192b67c232c02fb974b99\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://69218a8c22a7683c3ba9417f5629b8038f4793eb5245d49a5631e4ae4dbb90cc\",\"dweb:/ipfs/QmfUtUiLE1aFiKrQPN7Y97M3P1TPiY5Lvwddv646awU3gt\"]},\"lib/permit2/src/Permit2.sol\":{\"keccak256\":\"0x934c0eb24a52eb5900f01f5c328374b670366adf995ba9ed49bcd3d7b87b159e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bdfd05b3007726dc6dd2822c1dd9dc1b2471fbec507f30efa71a1a214c98bab6\",\"dweb:/ipfs/QmPq4hptCSUACQdynSa86bdEexE7RryzosrhUAZ9Xkqc5a\"]},\"lib/permit2/src/PermitErrors.sol\":{\"keccak256\":\"0x9fd1192bbc3ffa9354f2bfc534d7a1cdf2be2c940c96ed4ac7bc37991e1e5dfe\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://77f8b2e2c040c33e2c78f05e7e768a17f433c07adb699235c35c4dac92115070\",\"dweb:/ipfs/QmYX2VTyTm6QLtgp54kCrkAGY8uPxkx28urwLNEJsxTHJs\"]},\"lib/permit2/src/SignatureTransfer.sol\":{\"keccak256\":\"0xa821caa24d6231fa8befe24a34bfda2c3b05b56e67fb913c86b26a19b19b6bbe\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://584994a77e33aa2fe804b803ab302cb811ee945632b76f68d78db761b18a24a2\",\"dweb:/ipfs/QmVd67VRKX24tSaREBNwhzVfU6xxqRLNEoPY6CYgG3xU5W\"]},\"lib/permit2/src/interfaces/IAllowanceTransfer.sol\":{\"keccak256\":\"0x37f0ac203b6ef605c9533e1a739477e8e9dcea90710b40e645a367f8a21ace29\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e0104d72aeaec1cd66cc232e7de7b7ead08608efcc179491b8a66387614670b0\",\"dweb:/ipfs/QmfAZDyuNC9FXXbnJUwqHNwmAK6uRrXxtWEytLsxjskPsN\"]},\"lib/permit2/src/interfaces/IEIP712.sol\":{\"keccak256\":\"0xfdccf2b9639070803cd0e4198427fb0df3cc452ca59bd3b8a0d957a9a4254138\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f7c936ac42ce89e827db905a1544397f8bdf46db34cdb6aa1b90dea42fdb4c72\",\"dweb:/ipfs/QmVgurxo1N31qZqkPBirw9Z7S9tLYmv6jSwQp8R8ur2cBk\"]},\"lib/permit2/src/interfaces/IERC1271.sol\":{\"keccak256\":\"0x0a546b8535127fb4a49d36d5f306fd5a8bbe6125a1852f935b9bb85a04c1acef\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4b99651e2df98e283a97c46d8d1ac4eff0d6a3618e25f7f85294472a670b541c\",\"dweb:/ipfs/QmYRy5G8fXE8BfmyvGEbESEYZPPg3zJEFxHzR5GJZEMMTk\"]},\"lib/permit2/src/interfaces/IPermit2.sol\":{\"keccak256\":\"0xaa631cc9f53e699301d94233007110a345e6779011def484e8dd97b8fe0af771\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fc0502cf19c9c18f320a3001201e89e350393b75837f6b7971de18b2de06f30d\",\"dweb:/ipfs/QmT9SfhdJ7VJNNrf94g4H5usyi7ShqWGx7Cqsz9jZTjX96\"]},\"lib/permit2/src/interfaces/ISignatureTransfer.sol\":{\"keccak256\":\"0xe6df9966f8841dc3958ee86169c89de97e7f614c81c28b9dc947b12d732df64e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3d4eafdee7f48c3be8350a94eb6edd0bfb2af2c105df65787a77174f356c0317\",\"dweb:/ipfs/QmY1j2adeeAhNpn6cUuthemxGCdLXHTfyMh9yTKsY4mZ2d\"]},\"lib/permit2/src/libraries/Allowance.sol\":{\"keccak256\":\"0x65ee20fb1a77d4e25dff2feb84027ff9096b065b6fc064c80f9eee49f1f9d498\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8f65d62fc64a55b6e3aad9932959ab3f47d701c45f95622215aca0ba076f1a7d\",\"dweb:/ipfs/QmZjDb4Nq9pssFefg8X9bwJNJ4RJEPD8vCaFR2Ur2N4boD\"]},\"lib/permit2/src/libraries/PermitHash.sol\":{\"keccak256\":\"0x54af80d9c3193934c6947c31f59b8f3d7918f83676fe92ed6136593ad591d478\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5264001770be2cdeb7651e4d22af7edbc4e16da6d38747efeb4f54b5472ca5c5\",\"dweb:/ipfs/QmPvwau7DXw6stGQ14hpyTeLdYDYrrrdMnUfkQTPpMXQxz\"]},\"lib/permit2/src/libraries/SignatureVerification.sol\":{\"keccak256\":\"0x99f437ffe99aa1ff7885aec8b971f48efac00c6ebc59c02eec78c9ca850a5e30\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9365414bdb67813d4ef6c89fa152dff05fc2a64992a1a4f212fa414dbdee3eab\",\"dweb:/ipfs/QmfJxSszF1rjmMoNXW5oQMo9gARMHAXYTu68fkZvdEu58i\"]},\"src/erc20/BaseERC20.sol\":{\"keccak256\":\"0xf1204fc81fc5b9f775aa4cbfd18b889e9d68610c8d4b016694b4fecf1dcd8686\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3e5da34592a47476ceca450f692725ebac4fa84595b313ee69654fbc0b24207c\",\"dweb:/ipfs/QmPbEsTSgyi5VNdcAHAKrUMVoUtEzKNS5r3RV5K6vRCDvv\"]},\"src/erc20/BaseERC20CallBack.sol\":{\"keccak256\":\"0xf025b422741a5f0531efc16b7b5afd8ca0f193d651a270159b0ab7abf2067096\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3551cb15744d7385f417fad7b16da01a96bdb0ae2f376ed6416acdbf45716402\",\"dweb:/ipfs/QmSweTBTech2GVmpFinsDCYyU4tfzaLtGxTMpXhkzuZRR9\"]},\"src/sign/TokenBankDepositPermit2.sol\":{\"keccak256\":\"0xa7e7aaf4556d74a500eda89c1dc47f161fa8340186d82082d4af6865d9721241\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7579ac3eb30005d478da4d0428d50fea0d0c123973e10cd8089b46e8db974759\",\"dweb:/ipfs/QmdNsUuFfsb4qZebTw8PAybFoeQzfaP6qXPXXPVTZeW6vY\"]}},\"version\":1}",
+    "metadata": {
+        "compiler": {
+            "version": "0.8.17+commit.8df45f5f"
+        },
+        "language": "Solidity",
+        "output": {
+            "abi": [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "erc20Addr",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "permit2Addr",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "constructor"
+                },
+                {
+                    "inputs": [],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "_permit2",
+                    "outputs": [
+                        {
+                            "internalType": "contract IPermit2",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "addr_balance",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "baseErc20",
+                    "outputs": [
+                        {
+                            "internalType": "contract BaseERC20",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "amount",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "deposit"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "token",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "amount",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "nonce",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "deadline",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "to",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "signature",
+                            "type": "bytes"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "depositWithPermit2"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "struct ISignatureTransfer.PermitTransferFrom",
+                            "name": "permit",
+                            "type": "tuple",
+                            "components": [
+                                {
+                                    "internalType": "struct ISignatureTransfer.TokenPermissions",
+                                    "name": "permitted",
+                                    "type": "tuple",
+                                    "components": [
+                                        {
+                                            "internalType": "address",
+                                            "name": "token",
+                                            "type": "address"
+                                        },
+                                        {
+                                            "internalType": "uint256",
+                                            "name": "amount",
+                                            "type": "uint256"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "nonce",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "deadline",
+                                    "type": "uint256"
+                                }
+                            ]
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "spender",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "pure",
+                    "type": "function",
+                    "name": "hashPermitTransferFrom",
+                    "outputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "",
+                            "type": "bytes32"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "struct ISignatureTransfer.PermitTransferFrom",
+                            "name": "permit",
+                            "type": "tuple",
+                            "components": [
+                                {
+                                    "internalType": "struct ISignatureTransfer.TokenPermissions",
+                                    "name": "permitted",
+                                    "type": "tuple",
+                                    "components": [
+                                        {
+                                            "internalType": "address",
+                                            "name": "token",
+                                            "type": "address"
+                                        },
+                                        {
+                                            "internalType": "uint256",
+                                            "name": "amount",
+                                            "type": "uint256"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "nonce",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "deadline",
+                                    "type": "uint256"
+                                }
+                            ]
+                        },
+                        {
+                            "internalType": "struct ISignatureTransfer.SignatureTransferDetails",
+                            "name": "transferDetails",
+                            "type": "tuple",
+                            "components": [
+                                {
+                                    "internalType": "address",
+                                    "name": "to",
+                                    "type": "address"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "requestedAmount",
+                                    "type": "uint256"
+                                }
+                            ]
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "signature",
+                            "type": "bytes"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "spendWithPermit"
+                },
+                {
+                    "inputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "withdraw"
+                }
+            ],
+            "devdoc": {
+                "kind": "dev",
+                "methods": {},
+                "version": 1
+            },
+            "userdoc": {
+                "kind": "user",
+                "methods": {
+                    "depositWithPermit2(address,uint256,uint256,uint256,address,address,bytes)": {
+                        "notice": "使用 Permit2 授权 转账存款"
+                    }
+                },
+                "version": 1
+            }
+        },
+        "settings": {
+            "remappings": [
+                "@openzeppelin/=lib/openzeppelin-contracts/",
+                "ds-test/=lib/permit2/lib/forge-std/lib/ds-test/src/",
+                "erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+                "forge-gas-snapshot/=lib/permit2/lib/forge-gas-snapshot/src/",
+                "forge-std/=lib/forge-std/src/",
+                "halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/",
+                "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+                "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+                "permit2/=lib/permit2/",
+                "solmate/=lib/permit2/lib/solmate/",
+                "v2-core/=lib/v2-core/contracts/",
+                "v2-periphery/=lib/v2-periphery/contracts/"
+            ],
+            "optimizer": {
+                "enabled": true,
+                "runs": 200
+            },
+            "metadata": {
+                "bytecodeHash": "ipfs"
+            },
+            "compilationTarget": {
+                "src/sign/TokenBankDepositPermit2.sol": "TokenBankDepositPermit2"
+            },
+            "evmVersion": "london",
+            "libraries": {},
+            "viaIR": true
+        },
+        "sources": {
+            "lib/permit2/lib/solmate/src/tokens/ERC20.sol": {
+                "keccak256": "0xcdfd8db76b2a3415620e4d18cc5545f3d50de792dbf2c3dd5adb40cbe6f94b10",
+                "urls": [
+                    "bzz-raw://57b3ab70cde374af1cf2c9888636e8de6cf660f087b1c9abd805e9271e19fa35",
+                    "dweb:/ipfs/QmNrLDBAHYFjpjSd12jerm1AdBkDqEYUUaXgnT854BUZ97"
+                ],
+                "license": "AGPL-3.0-only"
+            },
+            "lib/permit2/lib/solmate/src/utils/SafeTransferLib.sol": {
+                "keccak256": "0xbadf3d708cf532b12f75f78a1d423135954b63774a6d4ba15914a551d348db8a",
+                "urls": [
+                    "bzz-raw://88ac8256bd520d1b8e6f9c4ac9e8777bffdc4a6c8afb1a848f596665779a55b4",
+                    "dweb:/ipfs/QmXx7X1dxe6f5VM91vgQ5BA4r2eF97GWDcQDrgHytcvfjU"
+                ],
+                "license": "AGPL-3.0-only"
+            },
+            "lib/permit2/src/AllowanceTransfer.sol": {
+                "keccak256": "0x2e0a14330c1413091f5155d8df0506d753b3f1d6e8c9dcdbfb02cc05ac34b643",
+                "urls": [
+                    "bzz-raw://a6965ea5d52145e4b1362bb9b8a9b9b640ecb13bd4d5d1770abc133c263265b6",
+                    "dweb:/ipfs/Qme1X5vKR3Nvw36MpsdsyhzvkPzcztUNgJ9RF7umDr6vYY"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/EIP712.sol": {
+                "keccak256": "0x5ac9f1db92c3102fa28911c754cffc54c6bbd3eb793192b67c232c02fb974b99",
+                "urls": [
+                    "bzz-raw://69218a8c22a7683c3ba9417f5629b8038f4793eb5245d49a5631e4ae4dbb90cc",
+                    "dweb:/ipfs/QmfUtUiLE1aFiKrQPN7Y97M3P1TPiY5Lvwddv646awU3gt"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/Permit2.sol": {
+                "keccak256": "0x934c0eb24a52eb5900f01f5c328374b670366adf995ba9ed49bcd3d7b87b159e",
+                "urls": [
+                    "bzz-raw://bdfd05b3007726dc6dd2822c1dd9dc1b2471fbec507f30efa71a1a214c98bab6",
+                    "dweb:/ipfs/QmPq4hptCSUACQdynSa86bdEexE7RryzosrhUAZ9Xkqc5a"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/PermitErrors.sol": {
+                "keccak256": "0x9fd1192bbc3ffa9354f2bfc534d7a1cdf2be2c940c96ed4ac7bc37991e1e5dfe",
+                "urls": [
+                    "bzz-raw://77f8b2e2c040c33e2c78f05e7e768a17f433c07adb699235c35c4dac92115070",
+                    "dweb:/ipfs/QmYX2VTyTm6QLtgp54kCrkAGY8uPxkx28urwLNEJsxTHJs"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/SignatureTransfer.sol": {
+                "keccak256": "0xa821caa24d6231fa8befe24a34bfda2c3b05b56e67fb913c86b26a19b19b6bbe",
+                "urls": [
+                    "bzz-raw://584994a77e33aa2fe804b803ab302cb811ee945632b76f68d78db761b18a24a2",
+                    "dweb:/ipfs/QmVd67VRKX24tSaREBNwhzVfU6xxqRLNEoPY6CYgG3xU5W"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/interfaces/IAllowanceTransfer.sol": {
+                "keccak256": "0x37f0ac203b6ef605c9533e1a739477e8e9dcea90710b40e645a367f8a21ace29",
+                "urls": [
+                    "bzz-raw://e0104d72aeaec1cd66cc232e7de7b7ead08608efcc179491b8a66387614670b0",
+                    "dweb:/ipfs/QmfAZDyuNC9FXXbnJUwqHNwmAK6uRrXxtWEytLsxjskPsN"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/interfaces/IEIP712.sol": {
+                "keccak256": "0xfdccf2b9639070803cd0e4198427fb0df3cc452ca59bd3b8a0d957a9a4254138",
+                "urls": [
+                    "bzz-raw://f7c936ac42ce89e827db905a1544397f8bdf46db34cdb6aa1b90dea42fdb4c72",
+                    "dweb:/ipfs/QmVgurxo1N31qZqkPBirw9Z7S9tLYmv6jSwQp8R8ur2cBk"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/interfaces/IERC1271.sol": {
+                "keccak256": "0x0a546b8535127fb4a49d36d5f306fd5a8bbe6125a1852f935b9bb85a04c1acef",
+                "urls": [
+                    "bzz-raw://4b99651e2df98e283a97c46d8d1ac4eff0d6a3618e25f7f85294472a670b541c",
+                    "dweb:/ipfs/QmYRy5G8fXE8BfmyvGEbESEYZPPg3zJEFxHzR5GJZEMMTk"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/interfaces/IPermit2.sol": {
+                "keccak256": "0xaa631cc9f53e699301d94233007110a345e6779011def484e8dd97b8fe0af771",
+                "urls": [
+                    "bzz-raw://fc0502cf19c9c18f320a3001201e89e350393b75837f6b7971de18b2de06f30d",
+                    "dweb:/ipfs/QmT9SfhdJ7VJNNrf94g4H5usyi7ShqWGx7Cqsz9jZTjX96"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/interfaces/ISignatureTransfer.sol": {
+                "keccak256": "0xe6df9966f8841dc3958ee86169c89de97e7f614c81c28b9dc947b12d732df64e",
+                "urls": [
+                    "bzz-raw://3d4eafdee7f48c3be8350a94eb6edd0bfb2af2c105df65787a77174f356c0317",
+                    "dweb:/ipfs/QmY1j2adeeAhNpn6cUuthemxGCdLXHTfyMh9yTKsY4mZ2d"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/libraries/Allowance.sol": {
+                "keccak256": "0x65ee20fb1a77d4e25dff2feb84027ff9096b065b6fc064c80f9eee49f1f9d498",
+                "urls": [
+                    "bzz-raw://8f65d62fc64a55b6e3aad9932959ab3f47d701c45f95622215aca0ba076f1a7d",
+                    "dweb:/ipfs/QmZjDb4Nq9pssFefg8X9bwJNJ4RJEPD8vCaFR2Ur2N4boD"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/libraries/PermitHash.sol": {
+                "keccak256": "0x54af80d9c3193934c6947c31f59b8f3d7918f83676fe92ed6136593ad591d478",
+                "urls": [
+                    "bzz-raw://5264001770be2cdeb7651e4d22af7edbc4e16da6d38747efeb4f54b5472ca5c5",
+                    "dweb:/ipfs/QmPvwau7DXw6stGQ14hpyTeLdYDYrrrdMnUfkQTPpMXQxz"
+                ],
+                "license": "MIT"
+            },
+            "lib/permit2/src/libraries/SignatureVerification.sol": {
+                "keccak256": "0x99f437ffe99aa1ff7885aec8b971f48efac00c6ebc59c02eec78c9ca850a5e30",
+                "urls": [
+                    "bzz-raw://9365414bdb67813d4ef6c89fa152dff05fc2a64992a1a4f212fa414dbdee3eab",
+                    "dweb:/ipfs/QmfJxSszF1rjmMoNXW5oQMo9gARMHAXYTu68fkZvdEu58i"
+                ],
+                "license": "MIT"
+            },
+            "src/erc20/BaseERC20.sol": {
+                "keccak256": "0xf1204fc81fc5b9f775aa4cbfd18b889e9d68610c8d4b016694b4fecf1dcd8686",
+                "urls": [
+                    "bzz-raw://3e5da34592a47476ceca450f692725ebac4fa84595b313ee69654fbc0b24207c",
+                    "dweb:/ipfs/QmPbEsTSgyi5VNdcAHAKrUMVoUtEzKNS5r3RV5K6vRCDvv"
+                ],
+                "license": "MIT"
+            },
+            "src/erc20/BaseERC20CallBack.sol": {
+                "keccak256": "0xf025b422741a5f0531efc16b7b5afd8ca0f193d651a270159b0ab7abf2067096",
+                "urls": [
+                    "bzz-raw://3551cb15744d7385f417fad7b16da01a96bdb0ae2f376ed6416acdbf45716402",
+                    "dweb:/ipfs/QmSweTBTech2GVmpFinsDCYyU4tfzaLtGxTMpXhkzuZRR9"
+                ],
+                "license": "MIT"
+            },
+            "src/sign/TokenBankDepositPermit2.sol": {
+                "keccak256": "0xa7e7aaf4556d74a500eda89c1dc47f161fa8340186d82082d4af6865d9721241",
+                "urls": [
+                    "bzz-raw://7579ac3eb30005d478da4d0428d50fea0d0c123973e10cd8089b46e8db974759",
+                    "dweb:/ipfs/QmdNsUuFfsb4qZebTw8PAybFoeQzfaP6qXPXXPVTZeW6vY"
+                ],
+                "license": "MIT"
+            }
+        },
+        "version": 1
+    },
+    "id": 36
+}
